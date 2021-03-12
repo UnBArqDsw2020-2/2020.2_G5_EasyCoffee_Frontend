@@ -1,5 +1,5 @@
 
-FROM node:alpine
+FROM node:14.16.0-alpine
 
 ## Define o local onde o app vai ficar no disco do container
 ## Pode ser o diretório que você quiser
