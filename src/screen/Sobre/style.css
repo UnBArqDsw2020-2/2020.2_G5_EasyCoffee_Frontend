@@ -1,0 +1,56 @@
+:root {
+  --marron: #844D36;
+  --white_ice: #F8F8F8;
+}
+
+body, html {
+  height: 100%;
+}
+.conteiner{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.Top-image img{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.Variedade_Cafe{
+  height: 100vh;
+  max-width: 992px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  background-color: var(--white_ice);
+  display: flex;
+  flex-direction: column;
+}
+.Variedade_Cafe section{
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.25rem;
+  align-content: center;
+}
+
+
+.conteinertext h2{
+  font-family: Roboto;
+  /* font-style: italic; */
+  font-weight: 800;
+  /* font-size: 72px; */
+  line-height: 60px;
+  color: var(--marron);
+  }
+  .conteinertext p{
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: bold;
+    /* font-size: 72px; */
+    /* line-height: 60px; */
+    color: var(--marron);
+    }
