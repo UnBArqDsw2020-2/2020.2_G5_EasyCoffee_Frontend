@@ -6,6 +6,7 @@ read num
 
 case $num in
 "1")
+npm install
 docker-compose up -d 
 
 ;;
