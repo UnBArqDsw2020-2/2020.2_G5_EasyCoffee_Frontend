@@ -1,0 +1,44 @@
+:root {
+  --marron: #844D36;
+  --white_ice: #F8F8F8;
+}
+
+body, html {
+  height: 100%;
+}
+.conteiner{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.conteiner_center{
+  height: 100vh;
+  /* max-width: 992px; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.conteiner_center section{
+  height: 100%;
+  max-width: 1200px;
+  width: 1300px;
+
+  flex: 1;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  gap: 1.25rem;
+  /* align-content: center; */
+}
+.conteiner_esquerdo{
+  padding-top: 1rem;
+  background-color: var(--white_ice);
+ 
+  
+}
+.conteiner_direito{
+ 
+}
+
+
