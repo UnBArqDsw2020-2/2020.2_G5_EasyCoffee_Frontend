@@ -1,0 +1,31 @@
+.navbar navbar-expand-lg navbar-light bg-light{
+  background-color: #F8F8F8;
+}
+.collapse navbar-collapse{
+  color:#844D36
+}
+
+.navbar-brand{
+  color: #844D36 !important;
+  font-weight: 800;
+  }
+.nav-item a{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #844D36;
+}
+.nav-item a:hover{
+  background-color: #844D36;
+  color: white;
+  height: 80px;
+  
+}
+
+
