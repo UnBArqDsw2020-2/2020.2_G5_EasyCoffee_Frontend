@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../../components/Navbar'
-import Flooter from '../../components/Flooter'
+import Flooter from '../../components/Footer'
 
 import foto_fundo from '../../image/Intro.png'
 import foto_saiba from '../../image/coffe_saiba.png'
@@ -10,7 +10,6 @@ import "./style.css";
 
 const Home = () =>{
   return(
-   
     <>
      <NavBar/>
     <div className='conteiner'>

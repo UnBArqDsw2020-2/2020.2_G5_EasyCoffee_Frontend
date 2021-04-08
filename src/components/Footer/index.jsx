@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ImgeTop from '../../image/chevron-down.png'
 
-import './styles.module.css';
+import './styles.css';
 
 
-export default function Footer() {
+export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when page is scorlled upto given distance
@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     
     <div class="card">
-    <div className='footer'>
+    <div className='Flooter'>
       {isVisible && 
         <div className='button-ScrollToTop' onClick={scrollToTop}>
 

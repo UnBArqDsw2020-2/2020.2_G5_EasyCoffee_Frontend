@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import NavBar from '../../components/Navbar'
-import Flooter from '../../components/Flooter'
+import Flooter from '../../components/Footer'
 
 
 

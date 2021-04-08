@@ -32,16 +32,12 @@ function Navbar() {
                   <a className="nav-link" href="/shop">Shop</a>
                 </li>
 
-
                 <li className="nav-item cart">
                   <button onClick={() => setIsVisibleCart(!isVisibleCart)} className="button-cart" >
                     <img src={Cart} alt="Cart" style={{ width: 35 }} />
                   </button>
                   <ModalCart isVisibleCart={isVisibleCart} />
                 </li>
-
-
-
 
               </ul>
             </div>

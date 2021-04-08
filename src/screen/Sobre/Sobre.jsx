@@ -1,7 +1,7 @@
 import React from "react";
 
 import Navbar from '../../components/Navbar/index'
-import Flooter from '../../components/Flooter'
+import Flooter from '../../components/Footer'
 
 import Top_img from '../../image/Rectangle 25.png'
 import img_ex from '../../image/image 5.png'
