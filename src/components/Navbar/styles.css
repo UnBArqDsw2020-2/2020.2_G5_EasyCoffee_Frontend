@@ -1,4 +1,45 @@
-.navbar navbar-expand-lg navbar-light bg-light{
+.navbar{
+  display:flex;
+  z-index: 1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height:2rem;
+  padding: 0;
+  margin:0;
+}
+.navigation{
+  display:flex;
+  height:100%;
+}
+.navigation ul{
+  display:flex;
+  flex-wrap: wrap;
+  height: 5rem;
+}
+.navigation a{
+  display:flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  text-decoration: none;
+  /* height:100%; */
+  color:var(--marrom);
+}
+.login{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 5rem;
+  background-color: var(--white_ice);
+}
+
+/* .navbar navbar-expand-lg navbar-light bg-light{
   background-color: #F8F8F8;
 }
 .collapse navbar-collapse{
@@ -15,7 +56,6 @@ font-style: normal;
 font-weight: 800;
 font-size: 18px;
 line-height: 21px;
-/* identical to box height */
 display: flex;
 align-items: center;
 
@@ -27,4 +67,4 @@ color: #844D36;
   height: 80px;
 }
 
-
+ */

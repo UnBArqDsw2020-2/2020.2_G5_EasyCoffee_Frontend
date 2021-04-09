@@ -1,16 +1,16 @@
 import { useState, useEffect } from 'react';
 
 import NavBar from '../../components/Navbar'
-import Flooter from '../../components/Footer'
+import Footer from '../../components/Footer'
 
 
 
 function Shop() {
   return (
     <>
-      <NavBar />
+      <NavBar shop />
         <div>shoop</div>
-      <Flooter />
+      <Footer />
     </>
   );
 }

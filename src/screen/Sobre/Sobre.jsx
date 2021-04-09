@@ -11,7 +11,7 @@ export default function Sobre_Cafe() {
   
   return (
     <>
-    <Navbar/>
+    <Navbar sobre/>
     <div className='conteiner'>
       <div className='Top-image'>
         <img src={Top_img} alt="Top_img"/>
