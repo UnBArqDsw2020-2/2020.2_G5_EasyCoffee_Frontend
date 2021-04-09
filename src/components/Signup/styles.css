@@ -1,0 +1,103 @@
+.master {
+    text-align: center;
+    margin: auto;
+    margin-top: 7%;
+    width: 325px;
+    position: relative;
+    font-family: clarendon-text-pro, serif;
+    font-style: normal;
+    font-weight: 400;
+  }
+  
+  .master h1 {
+    font-size: 50px;
+  }
+  
+  .master a {
+    color: #844D36;
+    text-decoration: none;
+  }
+  
+  .master .login {
+    margin-top: 50px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    text-align: left;
+    color: #707070;
+  }
+  
+  .master .login label {
+    margin-top: 20px;
+  }
+  
+  .master .login input {
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+  }
+  
+  .master .login input:focus {
+    outline-width: 0;
+  }
+  
+  .master .login a {
+    margin-top: 50px;
+    text-decoration: underline;
+    color: black;
+  }
+  
+  .master .login button {
+    margin-top: 15px;
+    background-color: #844D36;
+    height: 50px;
+    color: #fff;
+    border: 0px;
+    cursor: pointer;
+  }
+  
+  .master .login p {
+    margin-top: 40px;
+    display: inline-block;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    color: black;
+    position: relative;
+    padding: 0 15px;
+  }
+  
+  .master .login p:after, .master .login p:before {
+    position: absolute;
+    top: 50%;
+    width: 70px;
+    height: 1px;
+    content: '';
+    background-color: #707070;
+    left: 0px;
+  }
+  
+  .master .login p:after {
+    left: 78%;
+  }
+  
+  .master .login .redes {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+  }
+  
+  .master .login .redes .facebook {
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  .master .login .redes .google {
+    text-align: left;
+    margin-left: 10px;
+  }
+  /*# sourceMappingURL=index.css.map */

@@ -32,6 +32,12 @@ function Navbar() {
                   <a className="nav-link" href="/shop">Shop</a>
                 </li>
                 <li className="nav-item">
+                  <a className="nav-link" href="/signin">Fazer login</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/signup">Criar conta</a>
+                </li>
+                <li className="nav-item">
                   <img src={Cart} alt="Cart" style={{width:35}}/>
                 </li>
               </ul>
