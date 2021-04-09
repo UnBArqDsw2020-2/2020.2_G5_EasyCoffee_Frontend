@@ -95,6 +95,10 @@
     text-align: right;
     margin-right: 10px;
   }
+
+input {
+  display: block;
+}
   
   .master .login .redes .google {
     text-align: left;
