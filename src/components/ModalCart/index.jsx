@@ -4,7 +4,7 @@ import './styles.css'
 
 
 export default function ModalCart({ isVisibleCart }) {
-  const { cart } = useCart()
+  const { cart,updateProductAmount,removeProduct } = useCart()
   const total = cart.reduce((sumTotal,product)=>{
     return sumTotal + product.preco* product.amount
   },0)
@@ -19,7 +19,10 @@ export default function ModalCart({ isVisibleCart }) {
           <main>
             <p>{cart.map(product => (
               <>
-                <p>{product.nome} {product.amount}</p>
+                <p key={product.id}>{product.nome} {product.amount}</p>
+                <button onClick={() =>updateProductAmount(product.id,product.amount+1)}>+</button>
+                <button onClick={() =>updateProductAmount(product.id,product.amount-1)}>-</button>
+                <button onClick={() =>removeProduct(product.id)}>excluir</button>
               </>
             ))}</p>
           </main>

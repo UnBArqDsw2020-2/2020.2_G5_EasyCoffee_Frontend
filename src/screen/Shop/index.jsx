@@ -24,11 +24,11 @@ function Shop() {
           <input type="radio" className="btn-check" name="btnradio" id="btnradio3" autoComplete="off" />
           <label className="btn btn-select" htmlFor="btnradio3"><img src={caffe_c} alt="" /><h5>CAFÉ EM CÁPSULAS</h5></label>
         </div>
-      </div>
-
+      </div> 
       <div className="prod-list" >
         <ShopProduct  />
       </div>
+
     </>
   );
 }

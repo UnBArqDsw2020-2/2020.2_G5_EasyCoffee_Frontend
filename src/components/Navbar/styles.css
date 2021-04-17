@@ -1,4 +1,10 @@
 .navbar{
+  position: fixed;
+
+  width: 100%;
+
+  background-color:var(--white);
+
   display:flex;
   z-index: 1;
   box-shadow: 0 0 5px rgba(0,0,0,0.5);

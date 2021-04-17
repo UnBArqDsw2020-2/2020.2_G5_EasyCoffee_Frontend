@@ -43,12 +43,45 @@ export function CartProvider({ children }) {
     }
   }
 
-  function removeProduct() {
-    //Falta
+  function removeProduct(productId) {
+    try {
+      const updatedCart = [...cart]
+      const produtIndex = updatedCart.findIndex(product => product.id === productId)
+      if (produtIndex >= 0) {
+        updatedCart.splice(produtIndex, 1)
+        setCart(updatedCart)
+        localStorage.setItem('@EasyCoffe:cart', JSON.stringify(updatedCart))
+      }else{
+        throw Error()
+      }
+    } catch {
+      toast.error('Erro na remoção do produto');
+    }
   }
 
-  function updateProductAmount() {
-    //Falta
+  async function updateProductAmount(productId,amount) {
+    try {
+      if(amount<=0){
+        return
+      }
+      const product = await api.get(`/products/${productId}`)
+      const stock = product.data.quantidade
+      if(amount>stock){
+        toast.error('Quantidade solicitada fora de estoque');
+        return;
+      }
+      const updatedCart = [...cart]
+      const productExist = updatedCart.find(product=> product.id === productId)
+      if(productExist){
+        productExist.amount= amount
+        setCart(updatedCart)
+        localStorage.setItem('@EasyCoffe:cart', JSON.stringify(updatedCart))
+      }else{
+        throw Error()
+      }
+    } catch  {
+      toast.error('Erro na alteração de quantidade do produto');
+    }
   }
 
   return (
