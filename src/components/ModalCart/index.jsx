@@ -5,6 +5,9 @@ import './styles.css'
 
 export default function ModalCart({ isVisibleCart }) {
   const { cart } = useCart()
+  const total = cart.reduce((sumTotal,product)=>{
+    return sumTotal + product.preco* product.amount
+  },0)
 
   return (
     <>
@@ -21,7 +24,7 @@ export default function ModalCart({ isVisibleCart }) {
             ))}</p>
           </main>
           <footer>
-            <h3>Total: R$99</h3>
+            <h3>Total: R${total}</h3>
             <Button name='COMPRAR' />
             <Button name='LIMPAR CARRINHO' />
           </footer>
