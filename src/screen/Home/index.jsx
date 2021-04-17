@@ -1,17 +1,15 @@
 import React from 'react'
-import NavBar from '../../components/Navbar'
-import Flooter from '../../components/Footer'
+
+import "./style.css";
 
 import foto_fundo from '../../image/Intro.png'
 import foto_saiba from '../../image/coffe_saiba.png'
 import foto_saiba2 from '../../image/cafe_saiba2.png'
-import "./style.css";
 
 
 const Home = () => {
   return (
     <>
-      <NavBar home />
       <div className='conteiner'>
         <div className='Top-image'>
           <img src={foto_fundo} alt="foto_Fundo" />
@@ -48,7 +46,12 @@ const Home = () => {
           <section>
             <div>
               <div className="google-map-code">
-                <iframe className="Map-home" title="Map-home" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.2107977306855!2d-48.04477738264883!3d-15.990405573808129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xff49a03cdbd68a9e!2sUED%20-%20Unidade%20de%20Ensino%20e%20Doc%C3%AAncia!5e0!3m2!1spt-BR!2sbr!4v1615992316144!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style={{ border: 4 }} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              <iframe className="Map-home" title="Map-home" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3225.2107977306855!2d-48.04477738264883!3d-15.990405573808129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xff49a03cdbd68a9e!2sUED%20-%20Unidade%20de%20Ensino%20e%20Doc%C3%AAncia!5e0!3m2!1spt-BR!2sbr!4v1615992316144!5m2!1spt-BR!2sbr" 
+                width="600" 
+                height="450" 
+                style={{ border: 4 }} 
+                aria-hidden="false" 
+                ></iframe>
               </div>
             </div>
             <div className='conteinertext'>
@@ -69,7 +72,6 @@ const Home = () => {
         </div>
       </div>
 
-      <Flooter />
 
     </>
   )

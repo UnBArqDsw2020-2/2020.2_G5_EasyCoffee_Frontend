@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
-import api from '../../api'
-import cart from "../../image/el_shopping-cart-sign.png";
+import {api} from '../../services/api'
+
 import './styles.css'
 
+import cart from "../../image/el_shopping-cart-sign.png";
+import { useCart } from '../../hooks/useCart';
 
-function ProductShop(){
+
+export function ShopProduct() {
   const [data, setData] = useState([]);
+  const {addProduct} = useCart()
 
-  
+
   useEffect(() => {
     getData();
   }, [])
 
   async function getData() {
-    const {data: getResult} = await api.get('/product')
+    const { data: getResult } = await api.get('/products')
     setData(getResult)
-    console.log(getResult);
   }
 
 
@@ -23,13 +26,11 @@ function ProductShop(){
 
 
   return (
-    <>  
-
       <div>
         {data.map(user => (
-          <div class="card conteiner-list-produc">
-            <div class="card-body-list-product ">
-     
+          <div key={user.id} className="card conteiner-list-produc">
+            <div className="card-body-list-product ">
+
 
               <div className="row gx-5">
                 <div className="col prod-nome">
@@ -38,33 +39,30 @@ function ProductShop(){
                 <div className="col prod-preco">
                   <strong>R$ {user.preco}</strong>
                 </div>
-               
+
               </div>
+
               <div className="row gx-5">
                 <div className="col prod-descri">
                   {user.descricao}
                 </div>
                 <div className="col prod-img-cart">
                   <button
-                    size='small'
-                    disableElevation
-                    variant='contained'
-                    // onClick={() => addToCart(user)}
+                    type="button"
+                    onClick={() => addProduct(user.id)}
                   >
-                  <img src={cart} alt=""/>
-                   </button>
+                    <img src={cart} alt="carrinho" />
+                  </button>
                 </div>
-                </div >
-              </div>
-             
-  
+              </div >
+
+            </div>
+
+
           </div>
         ))}
       </div>
 
-    </>
-
   )
 }
 
-export default ProductShop;
