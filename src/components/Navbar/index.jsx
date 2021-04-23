@@ -14,7 +14,7 @@ export function Navbar() {
   const cartSize = cart.length;
   
   return (
-    <div className="navbar">
+    <div className="navbar-container">
       <Link className="nav-logo" to="/"><img src={Logo} alt="Logo" style={{ width: 80 }} /></Link>
       <div className="navigation">
         <ul>

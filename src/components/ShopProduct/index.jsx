@@ -11,15 +11,15 @@ export function ShopProduct() {
   const [data, setData] = useState([]);
   const {addProduct} = useCart()
 
+  async function getData() {
+    const { data: getResult } = await api.get('/products')
+    setData(getResult)
+  }
 
   useEffect(() => {
     getData();
   }, [])
 
-  async function getData() {
-    const { data: getResult } = await api.get('/products')
-    setData(getResult)
-  }
 
 
 

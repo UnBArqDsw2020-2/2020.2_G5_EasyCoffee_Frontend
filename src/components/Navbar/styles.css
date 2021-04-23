@@ -1,4 +1,4 @@
-.navbar{
+.navbar-container{
   position: fixed;
 
   width: 100%;
@@ -14,6 +14,7 @@
   flex-wrap: wrap;
   min-height:2rem;
   padding: 0;
+  top:0;
   margin:0;
 }
 .navigation{

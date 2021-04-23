@@ -1,13 +1,14 @@
 import { useCart } from '../../hooks/useCart'
 import Button from '../Button'
+import { CardProduct } from '../CardProduct'
 import './styles.css'
 
 
 export default function ModalCart({ isVisibleCart }) {
-  const { cart,updateProductAmount,removeProduct } = useCart()
-  const total = cart.reduce((sumTotal,product)=>{
-    return sumTotal + product.preco* product.amount
-  },0)
+  const { cart, updateProductAmount, removeProduct } = useCart()
+  const total = cart.reduce((sumTotal, product) => {
+    return sumTotal + product.preco * product.amount
+  }, 0)
 
   return (
     <>
@@ -19,12 +20,19 @@ export default function ModalCart({ isVisibleCart }) {
           <main>
             <p>{cart.map(product => (
               <>
-                <p key={product.id}>{product.nome} {product.amount}</p>
-                <button onClick={() =>updateProductAmount(product.id,product.amount+1)}>+</button>
-                <button onClick={() =>updateProductAmount(product.id,product.amount-1)}>-</button>
-                <button onClick={() =>removeProduct(product.id)}>excluir</button>
+                <CardProduct
+                  id={product.id}
+                  name={product.nome}
+                  amount={product.amount}
+                  preco={product.preco}
+                />
+                {/* <p key={product.id}>{product.nome} {product.amount}</p>
+                <button onClick={() => updateProductAmount(product.id, product.amount + 1)}>+</button>
+                <button onClick={() => updateProductAmount(product.id, product.amount - 1)}>-</button>
+                <button onClick={() => removeProduct(product.id)}>excluir</button> */}
               </>
-            ))}</p>
+            ))}
+            </p>
           </main>
           <footer>
             <h3>Total: R${total}</h3>
