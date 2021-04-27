@@ -1,21 +1,18 @@
 import React from 'react';
-import { Switch, Route, Redirect, BrowserRouter} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
-import Home from './screen/Home/home';
-import Sobre from './screen/Sobre/Sobre'
-import shop from './screen/Shop/Shop'
+import Home from './screen/Home';
+import Sobre from './screen/Sobre'
+import Shop from './screen/Shop'
 
 
-const Routes = ()=>{
-  return(
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/sobre" component={Sobre} />
-        <Route exact path="/shop" component={shop} />
-
-      </Switch>
-    </BrowserRouter>
+const Routes = () => {
+  return (
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/sobre" component={Sobre} />
+      <Route path="/shop" component={Shop} />
+    </Switch>
   );
 }
 

@@ -1,0 +1,39 @@
+.conteiner-list-produc{
+  width: 950px;
+
+  margin-left: 5px;
+  margin-top: 10px;
+
+  background: #FFFFFF;
+  border-radius: 20px;
+
+}
+
+.card-body-list-product {
+  padding: 1.5rem 1.5rem;
+}
+
+.prod-nome h5{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.prod-preco{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.prod-img-cart{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod-img-cart img {
+  width: 60px;
+}
+
+
+

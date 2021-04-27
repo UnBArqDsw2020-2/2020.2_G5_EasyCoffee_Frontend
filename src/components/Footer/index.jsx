@@ -4,7 +4,7 @@ import ImgeTop from '../../image/chevron-down.png'
 import './styles.css';
 
 
-export default function ScrollToTop() {
+export function Footer() {
   const [isVisible, setIsVisible] = useState(false);
 
   // Show button when page is scorlled upto given distance
@@ -30,21 +30,21 @@ export default function ScrollToTop() {
   }, []);
 
   return (
-    
-    <div class="card">
-    <div className='Flooter'>
-      {isVisible && 
-        <div className='button-ScrollToTop' onClick={scrollToTop}>
 
-          <section>
-          <img src={ImgeTop} alt='Go to top'/>
-          <p>Voltar ao topo</p>
-          </section>
-        </div>}
-        <p>© EASY COFFEE 2021.</p>
-        <p>Privacy & cookie policy</p>
+    <div className="card">
+      <div className='Flooter'>
+        {isVisible &&
+          <div className='button-ScrollToTop' onClick={scrollToTop}>
 
-    </div>
+            <section>
+              <img src={ImgeTop} alt='Go to top' />
+              <p>Voltar ao topo</p>
+            </section>
+          </div>}
+        <p>{"© EASY COFFEE 2021."}</p>
+        <p>{"Privacy & cookie policy"}</p>
+
+      </div>
     </div>
   );
 }
