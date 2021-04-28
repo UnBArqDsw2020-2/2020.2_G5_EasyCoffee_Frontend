@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import jwt from "jsonwebtoken";
+import { useHistory } from "react-router-dom";
 
 import './styles.css';
 
@@ -8,10 +9,12 @@ export default function Signin() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-
+    
+    let history = useHistory();
 
     const handleSubmit = async event => {
         event.preventDefault();
+
 
         const data = {
             username,
@@ -21,6 +24,10 @@ export default function Signin() {
         console.log(data);
 
         signin(data);
+
+        history.push("/");
+
+
 
     }
 
@@ -43,6 +50,7 @@ export default function Signin() {
         console.log(token);
 
         localStorage.setItem('@EasyCoffee:token', JSON.stringify(token));
+
 
     }
 
