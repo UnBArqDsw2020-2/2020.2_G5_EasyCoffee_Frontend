@@ -18,10 +18,6 @@ export default function Signup() {
         }
 
         let user = new User(username, password, email);
-
-        for (let prop in user) {
-            console.log(user[prop]);
-        }
         
         var DecoratedUser = function(user) {
             this.user = user;
@@ -39,8 +35,7 @@ export default function Signup() {
     }
 
     const registerUser = async user => {
-        console.log(JSON.stringify(user));
-        const response = await fetch('http://localhost:3001/api/auth/signup', {
+        const response = await fetch('http://localhost:3333/api/auth/signup', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -49,7 +44,7 @@ export default function Signup() {
             body: JSON.stringify(user)
         });
 
-        console.log(await response.json());
+        console.log(response);
     }
 
     return (
