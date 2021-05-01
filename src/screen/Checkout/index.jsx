@@ -29,7 +29,6 @@ export default function Checkout() {
 
         <div className="conteiner-form">
           <form>
-
             <div className="row">
               <div className="col">
                 <div className="mb-3">
@@ -90,6 +89,7 @@ export default function Checkout() {
               <label for="exampleInputPassword1" className="form-label">Password</label>
               <input type="password" className="form-control" id="exampleInputPassword1" />
             </div>
+            
             <div className="conteiner-ck-proc">
 
               <div className="product-ck">
@@ -102,7 +102,7 @@ export default function Checkout() {
                   </div>
                   <div className="col-sm">
                     Preço
-                   </div>
+                  </div>
                 </div>
 
                 {cart.map(product => (
@@ -117,7 +117,7 @@ export default function Checkout() {
                             {product.amount} Uni
                           </div>
                           <div className="col prod-preco">
-                            R$ {product.preco}
+                            R$ {product.preco *product.amount}
                           </div>
                         </div>
                       </div>
@@ -130,7 +130,7 @@ export default function Checkout() {
                       Subtotal
                     </div>
                     <div className="col-sm">
-                      {total}
+                      R$ {total}
                     </div>
                   </div>
 
@@ -139,7 +139,7 @@ export default function Checkout() {
                       Taxa Freet
                     </div>
                     <div className="col-sm">
-                      {Freet}
+                      R$ {Freet}
 
                     </div>
                   </div>
@@ -149,7 +149,7 @@ export default function Checkout() {
                       Total
                     </div>
                     <div className="col-sm">
-                      {Total}
+                      R$ {Total}
 
                     </div>
                   </div>
