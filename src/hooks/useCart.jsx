@@ -16,8 +16,9 @@ export function CartProvider({ children }) {
   async function addProduct(productId) {
     try {
       const updatedCart = [...cart]
-      const productExiste = updatedCart.find(product => product.id === productId)
-      const productInStock = await api.get(`/products/${productId}`)
+      const productExiste = updatedCart.find(product => product._id === productId)
+      const productInStock = await api.get(`/product/read/${productId}`)
+      console.log("DADOS,",productInStock.data)
       const stockAmount = productInStock.data.quantidade
       const currentAmount = productExiste ? productExiste.amount : 0
       const amount = currentAmount + 1
@@ -28,7 +29,7 @@ export function CartProvider({ children }) {
       if (productExiste) {
         productExiste.amount = amount
       } else {
-        const product = await api.get(`/products/${productId}`)
+        const product = await api.get(`/product/read/${productId}`)
         const newProduct = {
           ...product.data,
           amount: 1
@@ -46,7 +47,7 @@ export function CartProvider({ children }) {
   function removeProduct(productId) {
     try {
       const updatedCart = [...cart]
-      const produtIndex = updatedCart.findIndex(product => product.id === productId)
+      const produtIndex = updatedCart.findIndex(product => product._id === productId)
       if (produtIndex >= 0) {
         updatedCart.splice(produtIndex, 1)
         setCart(updatedCart)
@@ -64,14 +65,14 @@ export function CartProvider({ children }) {
       if(amount<=0){
         return
       }
-      const product = await api.get(`/products/${productId}`)
+      const product = await api.get(`/product/read/${productId}`)
       const stock = product.data.quantidade
       if(amount>stock){
         toast.error('Quantidade solicitada fora de estoque');
         return;
       }
       const updatedCart = [...cart]
-      const productExist = updatedCart.find(product=> product.id === productId)
+      const productExist = updatedCart.find(product=> product._id === productId)
       if(productExist){
         productExist.amount= amount
         setCart(updatedCart)

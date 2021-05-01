@@ -12,8 +12,8 @@ export function ShopProduct() {
   const {addProduct} = useCart()
 
   async function getData() {
-    const { data: getResult } = await api.get('/products')
-    setData(getResult)
+    const {data}  = await api.get('/product')
+    setData(data)
   }
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export function ShopProduct() {
   return (
       <div>
         {data.map(user => (
-          <div key={user.id} className="card conteiner-list-produc">
+          <div key={user._id} className="card conteiner-list-produc">
             <div className="card-body-list-product ">
 
 
@@ -49,7 +49,7 @@ export function ShopProduct() {
                 <div className="col prod-img-cart">
                   <button
                     type="button"
-                    onClick={() => addProduct(user.id)}
+                    onClick={() => addProduct(user._id)}
                   >
                     <img src={cart} alt="carrinho" />
                   </button>

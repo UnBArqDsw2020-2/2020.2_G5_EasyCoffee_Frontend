@@ -21,7 +21,7 @@ export default function ModalCart({ isVisibleCart }) {
             <p>{cart.map(product => (
               <>
                 <CardProduct
-                  id={product.id}
+                  id={product._id}
                   name={product.nome}
                   amount={product.amount}
                   preco={product.preco}
