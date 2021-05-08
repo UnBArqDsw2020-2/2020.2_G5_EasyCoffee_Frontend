@@ -1,11 +1,8 @@
-:root {
-  --marron: #844D36;
-  --white_ice: #F8F8F8;
-}
 
 .Flooter{
   background-color: var(--marron) ;
   color: var(--white_ice);
+  width: 100%;
 }
 .button-ScrollToTop {
 
@@ -17,13 +14,7 @@
 }
 
 .button-ScrollToTop section{
-  flex: 1;
-  display: grid;
-  grid-template-columns: 0fr 1fr;
-  
   font-weight: 800;
-  /* gap: 6.25rem; */
-  /* align-content: center; */
 }
 .button-ScrollToTop img{
   width: 35px;

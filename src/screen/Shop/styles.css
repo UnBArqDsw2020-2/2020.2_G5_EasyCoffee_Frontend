@@ -1,0 +1,39 @@
+.prod-list{
+  width: 970px;
+
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  background: #F8F8F8;
+  border: 5px solid #844D36;
+  box-shadow: 0px 4px 25px 10px rgba(132, 77, 54, 0.3);
+  border-radius: 10px;
+
+}
+
+.select-product{  
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-select{
+  width: 170px;
+  height: 210px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display:block;
+
+  font-weight: bold;
+}
+.btn-select:hover{
+  background-color: #844D36;
+  color: #FFF;
+}

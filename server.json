@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nome": "Café Preto",
+      "descricao": "Cafe muito forter",
+      "categoria": "Categoria 1",
+      "precoEmPromocao": 123,
+      "quantidade": 3,
+      "preco": 10,
+      "emPromocao": 0,
+      "avaliacao": 5,
+      "quantidadeDeAvaliacoes": 1
+    },
+    {
+      "id": 2,
+      "nome": "Café Amargo",
+      "descricao": "Cafe muito forter",
+      "categoria": "Categoria 1",
+      "precoEmPromocao": 123,
+      "quantidade": 3,
+      "preco": 10,
+      "emPromocao": 0,
+      "avaliacao": 5,
+      "quantidadeDeAvaliacoes": 1
+    },
+    {
+      "id": 3,
+      "nome": "Café Preto Forte",
+      "descricao": "Cafe muito forter",
+      "categoria": "Categoria 1",
+      "precoEmPromocao": 123,
+      "quantidade": 3,
+      "preco": 10,
+      "emPromocao": 0,
+      "avaliacao": 5,
+      "quantidadeDeAvaliacoes": 1
+    },
+    {
+      "id": 4,
+      "nome": "Café Fraco",
+      "descricao": "Cafe muito forter",
+      "categoria": "Categoria 1",
+      "precoEmPromocao": 123,
+      "quantidade": 3,
+      "preco": 10,
+      "emPromocao": 0,
+      "avaliacao": 5,
+      "quantidadeDeAvaliacoes": 1
+    }
+  ]
+}
