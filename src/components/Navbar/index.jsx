@@ -26,9 +26,11 @@ export function Navbar() {
             <img src={Cart} alt="Cart" style={{ width: 35 }} />
             <span>{cartSize}</span>
           </button>
+
           <ModalCart isVisibleCart={isVisibleCart} />
         </ul>
       </div>
+
     </div>
   );
 
