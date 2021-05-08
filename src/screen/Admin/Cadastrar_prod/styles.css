@@ -1,0 +1,60 @@
+:root {
+  --marron: #844D36;
+  --white_ice: #Ffff;
+  --black:#000;
+}
+
+.form-row{
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
+.Tipo_prod{
+  width:600px;
+  height:180px;
+  margin:auto;
+  font-family:Arial;
+}
+.btn-secondary{
+  color:var(--black) ;
+  background-color: var(--white_ice);
+  border-color: var(--white_ice);
+  font-weight: bold;
+  border-radius: 10%;
+}
+.btn-secondary:hover{
+  background-color: var(--marron);
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, 
+.btn-secondary:not(:disabled):not(.disabled):active, 
+.show>.btn-secondary.dropdown-toggle {
+  color: var(--white_ice);
+    background-color: var(--marron);
+  
+}
+
+.button_cadastrar{
+  /* Rectangle 38 */
+color: var(--white_ice);
+margin-top: 20px;
+width: 269px;
+height: 59px;
+font-weight: 800;
+
+background: #844D36;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 20px;
+
+border-color: var(--marron);
+}
+
+.button_cadastrar:hover{
+  color: var(--black);
+  background: var(--white_ice);
+  border-color: var(--marron);
+  border-width: 4px;
+}
+
+

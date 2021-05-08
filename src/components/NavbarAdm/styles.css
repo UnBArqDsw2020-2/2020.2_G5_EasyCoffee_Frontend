@@ -1,0 +1,38 @@
+:root {
+  --marron: #844D36;
+  --white_ice: #F8F8F8;
+}
+
+.Navbar{
+  background-color: var(--marron);
+  height: 80px;
+ 
+}
+
+.navbar-brand{
+  color:var(--white_ice) !important;
+  font-weight: 800;
+  }
+a.nav-out {
+  padding-right: 20px;
+  text-decoration: none;
+  font-family: Roboto;
+font-style: normal;
+font-weight: 800;
+font-size: 18px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: var(--white_ice);
+}
+a.nav-out:hover{
+  background-color: var(--white_ice);
+  color:  var(--marron);
+  height: 50px;
+  
+}
+
+
+
